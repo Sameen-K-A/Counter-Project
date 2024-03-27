@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            margin-left: 360px;
+            margin-top: 200px;
+            text-align: center;
+            width: 50%;
+            background-color: rgb(32, 174, 176);
+            border-radius: 10px;
+            padding: 1%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            color: white;
+        }
+        .inc {
+            background-color: rgb(0, 255, 110);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 30px;
+            border-width: 0px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 50px;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        .res {
+            background-color: rgb(255, 0, 0);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 30px;
+            border-width: 0px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 50px;
+            width: 150px;
+            font-weight: bold;
+
+        }
+
+        .dec {
+            background-color: rgb(234, 255, 0);
+            border-radius: 10px;
+            padding: 10px;
+            margin: 30px;
+            border-width: 0px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            height: 50px;
+            width: 150px;
+            font-weight: bold;
+
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <div class="main">
+        <h1>Counter Program</h1>
+        <br>
+        <h1 id="number">0</h1>
+        <input type="button" id="Increase" class="inc" value="+">
+        <input type="button" id="reset" class="res" value="reset">
+        <input type="button" id="Decrease" class="dec" value="-">
+    </div>
+
+    <script>
+        num = 0;
+        document.getElementById('Increase').onclick = function Increase() {
+            document.getElementById('number').innerHTML = ++num;
+        }
+
+        document.getElementById('reset').onclick = function Reset() {
+            document.getElementById('number').textContent = 0;
+            num = 0;
+        }
+
+        document.getElementById('Decrease').onclick = function Decrease() {
+            document.getElementById('number').innerHTML = --num;
+        }
+    </script>
+</body>
+
+</html>
